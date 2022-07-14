@@ -1,0 +1,12 @@
+on: [push, workflow_dispatch]
+
+name: self-hosted-example
+
+jobs:
+  simpleExample:
+    runs-on: [self-hosted, stg]
+    steps:
+    # checkout branch
+    - uses: juliangruber/sleep-action@v1
+      with:
+        time: 300s
